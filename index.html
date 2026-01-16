@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav class="nav">
+        <a href="aboutme.html">About</a>
+        <a href="aboutme.html#experience-section">Experience</a>
+        <a href="aboutme.html#education-section">Education</a>
+        <a href="aboutme.html#skills-section">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-text">
+        <h1>Bioinformatician, Evolutionary Genomicist and Microbiologist </h1>
+        <p>
+          I’m a bioinformatician and evolutionary genomicist working at the intersection of evolutionary genomics, comparative multi-omics, and machine learning. 
+          I develop scalable, reproducible analysis pipelines and open-source software to extract robust biological insight from large, complex datasets.
+        </p>
+        <div class="buttons">
+          <a class="btn" href="aboutme.html">About me</a>
+          <a class="btn btn-ghost" href="aboutme.html#experience-section">See experience</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/profile.jpg" alt="Profile photo" onerror="this.style.display='none'">
+      </div>
+    </section>
+
+    <section class="grid">
+      <a class="card linkcard" href="aboutme.html#skills-section">
+        <h2>Skills</h2><p>Languages, workflows, and tooling.</p>
+      </a>
+      <a class="card linkcard" href="aboutme.html#experience-section">
+        <h2>Experience</h2><p>Roles, projects, and impact.</p>
+      </a>
+      <a class="card linkcard" href="aboutme.html#education-section">
+        <h2>Education</h2><p>Degrees and training.</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="y"></span> Your Name · <a href="https://github.com/Ruth-Moraa">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
