@@ -170,3 +170,12 @@ a:hover{ text-decoration: underline; }
 .footer a{
   color: var(--muted);
 }
+.profile-pic{
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  display: block;
+  margin: 12px 0 16px;
+}
