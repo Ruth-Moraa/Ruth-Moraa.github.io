@@ -11,16 +11,24 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="index.html">Ruth Moraa</a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="#about">About</a>
-        <a href="#computational-skills">Computational Skills</a>
-        <a href="#biological-skills">Biological Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#links">Links</a>
-      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">
+        MENU <span class="burger" aria-hidden="true"></span>
+      </button>
     </div>
+
+    <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#computational-skills">Computational Skills</a>
+      <a href="#biological-skills">Biological Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#science-communication">Scientific Communication</a>
+      <a href="#links">Links</a>
+    </nav>
   </header>
 
   <!-- HERO ABOUT -->
@@ -35,40 +43,40 @@
           <h1>About Me</h1>
 
           <p class="lede">
-            I am a bioinformatician with a PhD in Evolutionary Genomics, an MSc in Bioinformatics, and a BSc in Microbiology.
-            I develop and apply reproducible computational workflows that translate complex biological data into robust, interpretable results.
+            I am a bioinformatician with a PhD in Evolutionary Genomics, an MSc in Bioinformatics, and a BSc in Microbiology. I develop and
+            apply reproducible computational workflows that translate complex biological data into robust, interpretable results.
           </p>
 
           <p>
-            My research integrates high-throughput omics, including RNA-seq, metagenomics, metatranscriptomics, and metabolomics,
-            with rigorous computational and statistical methods. I work at the interface of comparative genomics and transcriptomics,
-            integrative multi-omics, and machine learning based modelling, with a strong emphasis on reproducibility, scalability,
-            and transparent reporting.
+            My research integrates high-throughput omics, including RNA-seq, metagenomics, metatranscriptomics, and metabolomics, with rigorous
+            computational and statistical methods. I work at the interface of comparative genomics and transcriptomics, integrative multi-omics,
+            and machine learning based modelling, with a strong emphasis on reproducibility, scalability, and transparent reporting.
           </p>
 
           <p>
-            In my PhD research, I investigate the dynamics of chromosome evolution in termites, focusing on the chromosomal chains
-            that males of many species form during meiosis. I study how and why these meiotic chains arise and whether they are associated
-            with elevated rates of structural genome rearrangements, using comparative genomics, transcriptomics, and machine-learning approaches.
+            In my PhD research, I investigate the dynamics of chromosome evolution in termites, focusing on the chromosomal chains that males of many
+            species form during meiosis. I study how and why these meiotic chains arise and whether they are associated with elevated rates of structural
+            genome rearrangements, using comparative genomics, transcriptomics, and machine-learning approaches.
           </p>
 
           <p>
-            I am committed to collaborative research and training. I have served as a bioinformatics trainer and workshop instructor,
-            supported collaborators with workflow development and analysis, and contributed to research supervision and manuscript preparation.
+            I am committed to collaborative research and training. I have served as a bioinformatics trainer and workshop instructor, supported collaborators
+            with workflow development and analysis, and contributed to research supervision and manuscript preparation.
           </p>
 
           <div class="pillnav">
             <a href="#computational-skills">Computational Skills</a>
             <a href="#biological-skills">Biological Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
+            <a href="#publications">Publications</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#science-communication">Scientific Communication</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- SKILLS BANDS -->
+  <!-- COMPUTATIONAL SKILLS -->
   <section id="computational-skills" class="skills-band section">
     <div class="container">
       <h2 class="band-title">Computational Skills</h2>
@@ -95,7 +103,12 @@
         </div>
 
         <div class="skill">
-          <div class="skill-label">Machine learning: scikit-learn, PyTorch, pandas, matplotlib,</div>
+          <div class="skill-label">Data science: pandas, NumPy, SciPy</div>
+          <div class="skill-track"><div class="skill-fill" style="width:88%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Machine learning: scikit-learn, PyTorch</div>
           <div class="skill-track"><div class="skill-fill" style="width:75%"></div></div>
         </div>
 
@@ -105,8 +118,13 @@
         </div>
 
         <div class="skill">
-          <div class="skill-label">Containers and HPC: Docker, Slurm</div>
+          <div class="skill-label">Containers: Docker, Singularity, Apptainer</div>
           <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">HPC with Slurm (5+ years; usage and system administration)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
         </div>
 
         <div class="skill">
@@ -117,13 +135,14 @@
     </div>
   </section>
 
+  <!-- BIOLOGICAL SKILLS -->
   <section id="biological-skills" class="skills-band section">
     <div class="container">
       <h2 class="band-title">Biological Skills</h2>
 
       <div class="skills">
         <div class="skill">
-          <div class="skill-label">High-throughput omics analytics (transcriptomics, metagenomics, proteomics metabolomics)</div>
+          <div class="skill-label">High-throughput omics analytics (transcriptomics, metagenomics, metabolomics)</div>
           <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
         </div>
 
@@ -135,7 +154,7 @@
     </div>
   </section>
 
-  <!-- CARDS -->
+  <!-- EXPERIENCE / EDUCATION / NEW SECTIONS -->
   <main class="container">
     <section id="experience" class="card section">
       <h2>Experience</h2>
@@ -205,7 +224,7 @@
         </div>
 
         <div class="item">
-          <div class="when">2015 – 2019</div>
+          <div class="when">YEAR – YEAR</div>
           <div class="what">
             <h3>BSc in Microbiology · Pwani University</h3>
             <p><strong>Project / Thesis:</strong> Assessing the efficiency of Pwani University BioScience Research Centre UV rays in sterilization of DNA filter cups</p>
@@ -214,13 +233,67 @@
       </div>
     </section>
 
+    <section id="publications" class="card section">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li><strong>First Author</strong> (Year). Title. <em>Journal</em>. <a href="#">DOI</a></li>
+        <li><strong>Co-author</strong> (Year). Title. <em>Journal</em>. <a href="#">DOI</a></li>
+        <li>For a full list, see <a href="https://scholar.google.com/citations?hl=en&amp;user=Hv2tnT4AAAAJ">Google Scholar</a>.</li>
+      </ul>
+    </section>
+
+    <section id="teaching" class="card section">
+      <h2>Teaching</h2>
+      <ul class="bullets">
+        <li>Bioinformatics trainer and workshop instructor (topics: reproducible workflows, omics analysis, and best practices).</li>
+        <li>Mentorship and supervision of student research projects and pipeline development.</li>
+        <li>Support for analysis, interpretation, and scientific writing.</li>
+      </ul>
+    </section>
+
+    <section id="science-communication" class="card section">
+      <h2>Scientific Communication</h2>
+      <ul class="bullets">
+        <li>Cross-disciplinary collaboration and communication of results to diverse audiences.</li>
+        <li>Manuscript preparation support, figures, methods writing, and reproducible reporting.</li>
+        <li>Workshop materials, documentation, and community-facing resources for open science.</li>
+      </ul>
+    </section>
+
     <section id="links" class="card section">
       <h2>Links</h2>
-      <p class="links">
-        <a href="https://github.com/Ruth-Moraa">GitHub</a>
-        <a href="https://scholar.google.com/citations?hl=en&amp;user=Hv2tnT4AAAAJ">Google Scholar</a>
-        <a href="https://orcid.org/0000-0002-1486-5596">ORCID</a>
-      </p>
+
+      <div class="icon-links">
+        <a class="icon-link" href="https://github.com/Ruth-Moraa" aria-label="GitHub">
+          <span class="icon" aria-hidden="true">
+            <!-- GitHub mark (simple SVG) -->
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.12 3.2 9.46 7.64 11 .56.1.77-.25.77-.56v-2.1c-3.11.7-3.77-1.35-3.77-1.35-.51-1.34-1.25-1.7-1.25-1.7-1.02-.72.08-.7.08-.7 1.13.08 1.73 1.18 1.73 1.18 1 .1 1.63-.79 2.03-1.14.1-.76.39-1.27.7-1.56-2.48-.29-5.09-1.27-5.09-5.66 0-1.25.43-2.28 1.14-3.08-.12-.29-.5-1.48.11-3.08 0 0 .93-.3 3.05 1.18a10.3 10.3 0 0 1 2.78-.39c.94 0 1.88.13 2.78.39 2.12-1.48 3.05-1.18 3.05-1.18.61 1.6.23 2.79.11 3.08.71.8 1.14 1.83 1.14 3.08 0 4.4-2.62 5.37-5.12 5.65.4.36.76 1.06.76 2.14v3.17c0 .31.2.67.78.56A11.32 11.32 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
+            </svg>
+          </span>
+          <span>GitHub</span>
+        </a>
+
+        <a class="icon-link" href="https://scholar.google.com/citations?hl=en&amp;user=Hv2tnT4AAAAJ" aria-label="Google Scholar">
+          <span class="icon" aria-hidden="true">
+            <!-- Scholar-like icon (cap) -->
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 14L4.5 13.1V17L12 21l7.5-4v-3.9L12 17z"/>
+            </svg>
+          </span>
+          <span>Google Scholar</span>
+        </a>
+
+        <a class="icon-link" href="https://orcid.org/0000-0002-1486-5596" aria-label="ORCID">
+          <span class="icon" aria-hidden="true">
+            <!-- ORCID-like icon (id in circle) -->
+            <svg viewBox="0 0 24 24" role="img">
+              <path d="M12 .75C5.79.75.75 5.79.75 12S5.79 23.25 12 23.25 23.25 18.21 23.25 12 18.21.75 12 .75zm-4 6.3h2.1v10.9H8.01V7.05zm7.3 0c2.63 0 4.5 1.8 4.5 4.95 0 3.2-1.87 4.95-4.5 4.95h-3.1V7.05h3.1zm-.1 8.3c1.56 0 2.45-1.05 2.45-3.35 0-2.26-.89-3.35-2.45-3.35h-1v6.7h1z"/>
+            </svg>
+          </span>
+          <span>ORCID</span>
+        </a>
+      </div>
     </section>
   </main>
 
@@ -231,7 +304,32 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Menu toggle
+    const btn = document.getElementById("menuBtn");
+    const panel = document.getElementById("menuPanel");
+
+    btn.addEventListener("click", () => {
+      const open = panel.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    panel.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        panel.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!panel.contains(e.target) && !btn.contains(e.target)) {
+        panel.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
   </script>
 </body>
 </html>
