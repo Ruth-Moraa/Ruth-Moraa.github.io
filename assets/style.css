@@ -126,6 +126,13 @@ a:hover{ text-decoration: underline; }
   text-decoration: none;
 }
 
+/* Underline the About Me title */
+#about h1{
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--accent);
+}
+
 /* ===== HERO ===== */
 .hero{
   padding: 34px 0 18px;
