@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills · Ruth Moraa</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">Ruth Moraa</a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">
+        MENU <span class="burger" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+      <a href="index.html">Home</a>
+      <a href="aboutme.html">About</a>
+      <a class="active" href="skills.html">Skills</a>
+      <a href="teaching.html">Teaching &amp; Supervision</a>
+      <a href="science-communication.html">Scientific Communication</a>
+      <a href="publications.html">Publications</a>
+      <a href="links.html">Links</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card section">
+      <h1 class="page-title">Skills</h1>
+
+      <h2 class="section-title">Bioinformatic Skills</h2>
+      <p class="muted tight">
+        High-throughput omics analytics (Transcriptomics, metagenomics, proteomics, metabolomics)
+        <br />
+        Genomic analyses (Genome assembly, annotation, comparative genomics)
+      </p>
+
+      <h2 class="section-title" style="margin-top:18px;">Technical Skills</h2>
+
+      <div class="grid-3">
+        <div class="block">
+          <h3>Protein / MD</h3>
+          <ul class="bullets">
+            <li>MD refinement pipelines (restraints, ensembles)</li>
+            <li>Structure prediction (Boltz-2, Chai-2, AlphaFold2, ReFOLD, IntFOLD/MultiFOLD)</li>
+            <li>Ligand interactions (AlphaFold ligand workflows, Vina, gnina, SwissDock, DiffDock, Rosetta)</li>
+            <li>QA and docking evaluation (ModFOLD/quality estimation)</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Data / Machine Learning</h3>
+          <ul class="bullets">
+            <li>scikit-learn, TensorFlow, PyTorch</li>
+            <li>Feature engineering for quality/affinity scoring</li>
+            <li>Reproducible benchmarking and experiment tracking</li>
+          </ul>
+        </div>
+
+        <div class="block">
+          <h3>Collaboration</h3>
+          <ul class="bullets">
+            <li>AWS and HPC (MMM Hub Young Server-UCL)</li>
+            <li>Code review, documentation, mentoring</li>
+            <li>Teaching bioinformatics toolchains (BLAST, HHpred, PyMOL, Chimera)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top:18px;">Laboratory Skills</h2>
+      <p class="muted">
+        Laboratory skills: culture and media preparation, nucleic acid extraction, PCR, electrophoresis, mass spectrometry,
+        ELISA, western blotting, cloning, phlebotomy, laboratory animal handling, phenotyping and experiment management.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="y"></span> Ruth Moraa</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    const btn = document.getElementById("menuBtn");
+    const panel = document.getElementById("menuPanel");
+
+    btn.addEventListener("click", () => {
+      const open = panel.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+
+    panel.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        panel.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!panel.contains(e.target) && !btn.contains(e.target)) {
+        panel.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>
