@@ -23,26 +23,23 @@
       <a href="skills.html">Skills</a>
       <a href="experience.html">Experience</a>
       <a href="education.html">Education</a>
-      <a href="publications.html">Publications</a>
-      <a href="teaching.html">Teaching &amp; Supervision</a>
       <a href="science-communication.html">Scientific Communication</a>
       <a href="links.html">Links</a>
     </nav>
   </header>
 
   <main class="container">
+    <!-- ABOUT -->
     <section class="hero section">
       <div class="hero-grid">
-        <!-- Photo LEFT (not centered) -->
         <div class="hero-photo">
           <img class="profile-pic" src="assets/gitprofile.jpg" alt="Ruth Moraa" />
         </div>
 
         <div class="hero-copy">
-          <!-- Underlined title -->
           <h1 class="page-title">ABOUT ME</h1>
 
-          <!-- YOUR TEXT (unchanged) -->
+          <!-- Your text unchanged -->
           <p class="lede">
             I am a bioinformatician with a PhD in Evolutionary Genomics, an MSc in Bioinformatics,
             and a BSc in Microbiology. I develop and apply reproducible computational workflows
@@ -71,15 +68,60 @@
             analysis, and contributed to research supervision and manuscript preparation.
           </p>
 
-          <!-- Buttons to PAGES like Edohmen -->
+          <!-- Buttons to other pages -->
           <div class="pillnav">
             <a href="skills.html">Skills</a>
             <a href="experience.html">Experience</a>
             <a href="education.html">Education</a>
-            <a href="publications.html">Publications</a>
-            <a href="teaching.html">Teaching</a>
             <a href="science-communication.html">Scientific Communication</a>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPUTATIONAL SKILLS BARS (on About page) -->
+    <section class="skills-band section">
+      <h2 class="band-title">Computational Skills</h2>
+
+      <div class="skills">
+        <div class="skill">
+          <div class="skill-label">Python (10+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Linux (10+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Bash/Shell (10+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">R (9+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Workflows: Snakemake, Nextflow (5+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:72%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Containers: Docker, Singularity, Apptainer (5+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">HPC with Slurm (5+ years; usage and system administration)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-label">Version control and collaboration: Bitbucket, Git, GitHub (6+ years)</div>
+          <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
         </div>
       </div>
     </section>
@@ -92,10 +134,8 @@
   </footer>
 
   <script>
-    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
 
-    // Menu toggle
     const btn = document.getElementById("menuBtn");
     const panel = document.getElementById("menuPanel");
 
