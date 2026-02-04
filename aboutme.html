@@ -3,215 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About · Ruth Moraa</title>
+  <title>About Me · Ruth Moraa</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="aboutme.html">Ruth Moraa</a>
+      <a class="brand" href="index.html">Ruth Moraa</a>
 
-      <div class="topbar-right">
-        <nav class="social" aria-label="Social links">
-          <a href="https://github.com/Ruth-Moraa" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.12 3.2 9.46 7.64 11 .56.1.77-.25.77-.56v-2.1c-3.11.7-3.77-1.35-3.77-1.35-.51-1.34-1.25-1.7-1.25-1.7-1.02-.72.08-.7.08-.7 1.13.08 1.73 1.18 1.73 1.18 1 .1 1.63-.79 2.03-1.14.1-.76.39-1.27.7-1.56-2.48-.29-5.09-1.27-5.09-5.66 0-1.25.43-2.28 1.14-3.08-.12-.29-.5-1.48.11-3.08 0 0 .93-.3 3.05 1.18a10.3 10.3 0 0 1 2.78-.39c.94 0 1.88.13 2.78.39 2.12-1.48 3.05-1.18 3.05-1.18.61 1.6.23 2.79.11 3.08.71.8 1.14 1.83 1.14 3.08 0 4.4-2.62 5.37-5.12 5.65.4.36.76 1.06.76 2.14v3.17c0 .31.2.67.78.56A11.32 11.32 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
-            </svg>
-          </a>
-
-          <a href="https://scholar.google.com/citations?hl=en&amp;user=Hv2tnT4AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 14L4.5 13.1V17L12 21l7.5-4v-3.9L12 17z"/>
-            </svg>
-          </a>
-
-          <a href="https://orcid.org/0000-0002-1486-5596" target="_blank" rel="noopener" aria-label="ORCID">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 .75C5.79.75.75 5.79.75 12S5.79 23.25 12 23.25 23.25 18.21 23.25 12 18.21.75 12 .75zm-4 6.3h2.1v10.9H8.01V7.05zm7.3 0c2.63 0 4.5 1.8 4.5 4.95 0 3.2-1.87 4.95-4.5 4.95h-3.1V7.05h3.1zm-.1 8.3c1.56 0 2.45-1.05 2.45-3.35 0-2.26-.89-3.35-2.45-3.35h-1v6.7h1z"/>
-            </svg>
-          </a>
-        </nav>
-
-        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">
-          MENU <span class="burger" aria-hidden="true"></span>
-        </button>
-      </div>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">
+        MENU <span class="burger" aria-hidden="true"></span>
+      </button>
     </div>
 
     <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
+      <a href="index.html">Home</a>
       <a class="active" href="aboutme.html">About</a>
       <a href="skills.html">Skills</a>
+      <a href="experience.html">Experience</a>
+      <a href="education.html">Education</a>
+      <a href="publications.html">Publications</a>
       <a href="teaching.html">Teaching &amp; Supervision</a>
       <a href="science-communication.html">Scientific Communication</a>
-      <a href="publications.html">Publications</a>
       <a href="links.html">Links</a>
     </nav>
   </header>
 
   <main class="container">
-    <section class="card section">
-      <h1 class="page-title">About Me</h1>
-
-      <div class="about-grid">
-        <div class="about-photo">
-          <img class="profile-pic" src="assets/gitprofile.jpg" alt="Ruth Moraa">
+    <section class="hero section">
+      <div class="hero-grid">
+        <!-- Photo LEFT (not centered) -->
+        <div class="hero-photo">
+          <img class="profile-pic" src="assets/gitprofile.jpg" alt="Ruth Moraa" />
         </div>
 
-        <div class="about-copy">
+        <div class="hero-copy">
+          <!-- Underlined title -->
+          <h1 class="page-title">ABOUT ME</h1>
+
+          <!-- YOUR TEXT (unchanged) -->
           <p class="lede">
-            I am Ruth Moraa, a bioinformatician (MSc) and microbiologist (BSc) finalising a PhD in Evolutionary Genomics at the Institute for Organismic
-            and Molecular Evolution (Johannes Gutenberg University Mainz). My research bridges evolutionary biology and computation, focusing on comparative
-            omics and reproducible analysis workflows for complex genomic datasets.
+            I am a bioinformatician with a PhD in Evolutionary Genomics, an MSc in Bioinformatics,
+            and a BSc in Microbiology. I develop and apply reproducible computational workflows
+            that translate complex biological data into robust, interpretable results.
           </p>
 
-          <p class="muted">
-            My PhD research examined chromosome evolution in termites, including non-canonical sex chromosome systems, meiotic multivalents and ring
-            configurations, and novel chromosomal translocations. I focus on how these architectures arise, how they shape genome structure, and how
-            they relate to inbreeding and evolutionary change.
+          <p>
+            My research integrates high-throughput omics, including RNA-seq, metagenomics,
+            metatranscriptomics, and metabolomics, with rigorous computational and statistical
+            methods. I work at the interface of comparative genomics and transcriptomics, integrative
+            multi-omics, and machine-learning-based modelling, with a strong emphasis on
+            reproducibility, scalability, and transparent reporting.
           </p>
 
+          <p>
+            In my PhD research, I investigate the dynamics of chromosome evolution in termites,
+            focusing on the chromosomal chains that males of many species form during meiosis. I study
+            how and why these meiotic chains arise and whether they are associated with elevated rates
+            of structural genome rearrangements, using comparative genomics, transcriptomics, and
+            machine-learning approaches.
+          </p>
+
+          <p>
+            I am committed to collaborative research and training. I have served as a bioinformatics
+            trainer and workshop instructor, supported collaborators with workflow development and
+            analysis, and contributed to research supervision and manuscript preparation.
+          </p>
+
+          <!-- Buttons to PAGES like Edohmen -->
           <div class="pillnav">
-            <a href="#computational-skills">Computational Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <section id="computational-skills" class="skills-band section">
-    <div class="container">
-      <h2 class="band-title">Computational Skills</h2>
-
-      <div class="skills">
-        <div class="skill">
-          <div class="skill-label">Python (10+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">Linux (10+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:92%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">Bash/Shell (10+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">R (9+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">Workflows: Snakemake, Nextflow (5+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:72%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">Containers: Docker, Singularity, Apptainer (5+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">HPC with Slurm (&gt;5 years; usage and system administration)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-label">Version control and collaboration: Bitbucket, Git, GitHub (6+ years)</div>
-          <div class="skill-track"><div class="skill-fill" style="width:90%"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <main class="container">
-    <section id="experience" class="card section">
-      <h2 class="section-title">Experience</h2>
-
-      <div class="timeline">
-        <div class="item">
-          <div class="when">2023 – Present</div>
-          <div class="what">
-            <h3>PhD Candidate · Institute for Organismic and Molecular Evolution, Johannes Gutenberg University Mainz</h3>
-            <p class="project-line"><strong>Project:</strong> Dynamics of Chromosome Evolution in Termites: Multivalent Chains, Inbreeding and Novel Chromosomal Translocations</p>
-            <ul class="bullets">
-              <li>Comparative genomics and transcriptomics analyses; reproducible pipeline development.</li>
-              <li>Focus on meiotic multivalent chains/rings and structural genome rearrangements.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="when">2020 – 2023</div>
-          <div class="what">
-            <h3>MSc Research Assistant (Bioinformatics) · Pwani University</h3>
-            <p class="project-line">
-              <strong>Project:</strong>
-              <a href="https://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=Hv2tnT4AAAAJ&amp;citation_for_view=Hv2tnT4AAAAJ:d1gkVwhDpl0C"
-                 target="_blank" rel="noopener">
-                Genome-wide association study for agro-morphological traits and pipeline development to assess population structure in finger millet
-              </a>
-            </p>
-            <ul class="bullets">
-              <li>Genome assembly; variant calling; GWAS/marker–trait association; population structure analysis.</li>
-              <li>Reproducible workflows for scalable analysis and reporting.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="when">2018 – 2019</div>
-          <div class="what">
-            <h3>BSc Research Internship · Kenya Medical Research Institute (KEMRI), Center for Microbiology Research</h3>
-            <p class="project-line"><strong>Project:</strong> Molecular and microbiological investigation of human enterotoxigenic bacteria</p>
-            <ul class="bullets">
-              <li>PCR; ELISA; isolation/culture; antimicrobial susceptibility testing.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="when">2018 – 2019</div>
-          <div class="what">
-            <h3>BSc Internship · International Centre of Insect Physiology and Ecology (icipe), Nairobi</h3>
-            <p class="project-line"><strong>Project:</strong> Molecular detection of the prevalence of <em>Theileria parva</em> at the Maasai Mara National Reserve</p>
-            <ul class="bullets">
-              <li>Fieldwork; animal handling; nucleic acid extraction; PCR; statistical analyses.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="card section">
-      <h2 class="section-title">Education</h2>
-
-      <div class="timeline">
-        <div class="item">
-          <div class="when">2023 – 2026</div>
-          <div class="what">
-            <h3>PhD (Dr. rer. nat.) in Evolutionary Genomics · Johannes Gutenberg University Mainz</h3>
-            <p class="muted">Thesis: Dynamics of Chromosome Evolution in Termites: Multivalent Chains, Inbreeding and Novel Chromosomal Translocations</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="when">2020 – 2023</div>
-          <div class="what">
-            <h3>MSc in Bioinformatics · Pwani University</h3>
-            <p class="muted">Thesis: Genome-wide association study (GWAS) and pipeline development to assess population structure for agro-morphological traits among finger millet</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="when">2015 – 2019</div>
-          <div class="what">
-            <h3>BSc in Microbiology · Pwani University</h3>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="education.html">Education</a>
+            <a href="publications.html">Publications</a>
+            <a href="teaching.html">Teaching</a>
+            <a href="science-communication.html">Scientific Communication</a>
           </div>
         </div>
       </div>
@@ -219,32 +86,16 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-inner">
+    <div class="container">
       <p>© <span id="y"></span> Ruth Moraa</p>
-
-      <div class="social" aria-label="Social links footer">
-        <a href="https://github.com/Ruth-Moraa" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 .5C5.73.5.75 5.6.75 12c0 5.12 3.2 9.46 7.64 11 .56.1.77-.25.77-.56v-2.1c-3.11.7-3.77-1.35-3.77-1.35-.51-1.34-1.25-1.7-1.25-1.7-1.02-.72.08-.7.08-.7 1.13.08 1.73 1.18 1.73 1.18 1 .1 1.63-.79 2.03-1.14.1-.76.39-1.27.7-1.56-2.48-.29-5.09-1.27-5.09-5.66 0-1.25.43-2.28 1.14-3.08-.12-.29-.5-1.48.11-3.08 0 0 .93-.3 3.05 1.18a10.3 10.3 0 0 1 2.78-.39c.94 0 1.88.13 2.78.39 2.12-1.48 3.05-1.18 3.05-1.18.61 1.6.23 2.79.11 3.08.71.8 1.14 1.83 1.14 3.08 0 4.4-2.62 5.37-5.12 5.65.4.36.76 1.06.76 2.14v3.17c0 .31.2.67.78.56A11.32 11.32 0 0 0 23.25 12C23.25 5.6 18.27.5 12 .5z"/>
-          </svg>
-        </a>
-        <a href="https://scholar.google.com/citations?hl=en&amp;user=Hv2tnT4AAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 14L4.5 13.1V17L12 21l7.5-4v-3.9L12 17z"/>
-          </svg>
-        </a>
-        <a href="https://orcid.org/0000-0002-1486-5596" target="_blank" rel="noopener" aria-label="ORCID">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 .75C5.79.75.75 5.79.75 12S5.79 23.25 12 23.25 23.25 18.21 23.25 12 18.21.75 12 .75zm-4 6.3h2.1v10.9H8.01V7.05zm7.3 0c2.63 0 4.5 1.8 4.5 4.95 0 3.2-1.87 4.95-4.5 4.95h-3.1V7.05h3.1zm-.1 8.3c1.56 0 2.45-1.05 2.45-3.35 0-2.26-.89-3.35-2.45-3.35h-1v6.7h1z"/>
-          </svg>
-        </a>
-      </div>
     </div>
   </footer>
 
   <script>
+    // Year
     document.getElementById("y").textContent = new Date().getFullYear();
 
+    // Menu toggle
     const btn = document.getElementById("menuBtn");
     const panel = document.getElementById("menuPanel");
 
@@ -261,15 +112,11 @@
     });
 
     document.addEventListener("click", (e) => {
-      if (!panel.contains(e_toggleTarget(e)) && !btn.contains(e_toggleTarget(e))) {
+      if (!panel.contains(e.target) && !btn.contains(e.target)) {
         panel.classList.remove("open");
         btn.setAttribute("aria-expanded", "false");
       }
     });
-
-    function e_toggleTarget(e){
-      return e.target;
-    }
   </script>
 </body>
 </html>
