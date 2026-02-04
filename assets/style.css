@@ -69,6 +69,7 @@ a:hover{ text-decoration:underline; }
   background: rgba(0,0,0,.18);
   color: var(--text);
   font-weight: 650;
+  text-transform: none;
 }
 
 .burger{
@@ -155,8 +156,8 @@ a:hover{ text-decoration:underline; }
 }
 
 .lede{
+  margin: 0 0 10px;
   color: var(--text);
-  margin-top: 0;
 }
 
 .hero-copy p{ color: var(--muted); }
@@ -191,6 +192,45 @@ a:hover{ text-decoration:underline; }
   color: var(--text);
   text-decoration:none;
   background: rgba(255,255,255,.06);
+}
+
+/* Skills band + bars */
+.skills-band{
+  padding: 26px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  background: rgba(17,26,51,.35);
+}
+
+.band-title{
+  margin: 0 0 14px;
+  font-size: 1.35rem;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-label{
+  font-weight: 650;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.skill-track{
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.28);
+  border: 1px solid rgba(255,255,255,.08);
+  overflow: hidden;
+}
+
+.skill-fill{
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00c2ff, #7fdc5a);
 }
 
 /* Blocks inside cards */
@@ -231,7 +271,7 @@ a:hover{ text-decoration:underline; }
 
 .muted{ color: var(--muted); }
 
-/* Timeline */
+/* Timeline (Education-style) */
 .timeline{
   display:flex;
   flex-direction:column;
@@ -246,6 +286,7 @@ a:hover{ text-decoration:underline; }
   border: 1px solid rgba(255,255,255,.06);
   border-radius: 14px;
   background: rgba(0,0,0,.12);
+  align-items: start;
 }
 
 .when{
@@ -260,38 +301,7 @@ a:hover{ text-decoration:underline; }
 .what p{
   margin: 0;
   color: var(--muted);
-}
-
-/* Entries (Teaching / Workshops) */
-.entries{
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-}
-
-.entry{
-  display:grid;
-  grid-template-columns: 160px 1fr;
-  gap: 14px;
-  padding: 12px 14px;
-  border: 1px solid rgba(255,255,255,.06);
-  border-radius: 14px;
-  background: rgba(0,0,0,.10);
-}
-
-.entry-when{
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
-}
-
-.entry-title{
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 3px;
-}
-
-.entry-sub{
-  color: var(--muted);
+  line-height: 1.55;
 }
 
 /* Publications */
@@ -329,4 +339,38 @@ a:hover{ text-decoration:underline; }
   padding: 10px 12px;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.08);
-  backgrou
+  background: rgba(0,0,0,.12);
+  color: var(--text);
+}
+
+.icon-link:hover{
+  text-decoration:none;
+  background: rgba(255,255,255,.06);
+}
+
+.icon{
+  width: 20px;
+  height: 20px;
+  display:inline-flex;
+}
+
+.icon svg{
+  width: 20px;
+  height: 20px;
+  fill: rgba(233,236,245,.9);
+}
+
+/* Footer */
+.footer{
+  padding: 26px 0;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .profile-pic{ width: 220px; height: 220px; }
+  .grid-3{ grid-template-columns: 1fr; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .item{ grid-template-columns: 1fr; }
+}
