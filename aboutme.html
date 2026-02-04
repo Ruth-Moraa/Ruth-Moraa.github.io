@@ -3,55 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me · Ruth Moraa</title>
-  <link rel="stylesheet" href="assets/style.css" />
+  <title>About · Ruth Moraa</title>
+  <link rel="stylesheet" href="assets/style.css?v=1" />
 </head>
 
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="index.html">Ruth Moraa</a>
-
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">
         MENU <span class="burger" aria-hidden="true"></span>
       </button>
     </div>
 
     <nav class="menu-panel" id="menuPanel" aria-label="Site menu">
-      <a href="index.html">Home</a>
       <a class="active" href="aboutme.html">About</a>
+      <a href="aboutme.html#computational-skills">Computational Skills</a>
+      <a href="aboutme.html#experience">Experience</a>
+      <a href="aboutme.html#education">Education</a>
       <a href="skills.html">Skills</a>
-      <a href="experience.html">Experience</a>
-      <a href="education.html">Education</a>
       <a href="science-communication.html">Scientific Communication</a>
+      <a href="teaching-supervision.html">Teaching &amp; Supervision</a>
       <a href="links.html">Links</a>
     </nav>
   </header>
 
   <main class="container">
     <!-- ABOUT -->
-    <section class="hero section">
+    <section id="about" class="section">
       <div class="hero-grid">
-        <div class="hero-photo">
+        <div>
           <img class="profile-pic" src="assets/gitprofile.jpg" alt="Ruth Moraa" />
         </div>
 
-        <div class="hero-copy">
+        <div>
           <h1 class="page-title">ABOUT ME</h1>
 
-          <!-- Your text unchanged -->
           <p class="lede">
             I am a bioinformatician with a PhD in Evolutionary Genomics, an MSc in Bioinformatics,
-            and a BSc in Microbiology. I develop and apply reproducible computational workflows
-            that translate complex biological data into robust, interpretable results.
+            and a BSc in Microbiology. I develop and apply reproducible computational workflows that
+            translate complex biological data into robust, interpretable results.
           </p>
 
           <p>
             My research integrates high-throughput omics, including RNA-seq, metagenomics,
-            metatranscriptomics, and metabolomics, with rigorous computational and statistical
-            methods. I work at the interface of comparative genomics and transcriptomics, integrative
-            multi-omics, and machine-learning-based modelling, with a strong emphasis on
-            reproducibility, scalability, and transparent reporting.
+            metatranscriptomics, and metabolomics, with rigorous computational and statistical methods.
+            I work at the interface of comparative genomics and transcriptomics, integrative multi-omics,
+            and machine-learning-based modelling, with a strong emphasis on reproducibility, scalability,
+            and transparent reporting.
           </p>
 
           <p>
@@ -63,25 +62,26 @@
           </p>
 
           <p>
-            I am committed to collaborative research and training. I have served as a bioinformatics
-            trainer and workshop instructor, supported collaborators with workflow development and
-            analysis, and contributed to research supervision and manuscript preparation.
+            I am committed to collaborative research and training. I have served as a bioinformatics trainer
+            and workshop instructor, supported collaborators with workflow development and analysis, and
+            contributed to research supervision and manuscript preparation.
           </p>
 
-          <!-- Buttons to other pages -->
           <div class="pillnav">
+            <a href="#computational-skills">Computational Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
             <a href="skills.html">Skills</a>
-            <a href="experience.html">Experience</a>
-            <a href="education.html">Education</a>
             <a href="science-communication.html">Scientific Communication</a>
+            <a href="teaching-supervision.html">Teaching &amp; Supervision</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPUTATIONAL SKILLS BARS (on About page) -->
-    <section class="skills-band section">
-      <h2 class="band-title">Computational Skills</h2>
+    <!-- COMPUTATIONAL SKILLS (BARS ON ABOUT PAGE) -->
+    <section id="computational-skills" class="skills-band section">
+      <h2>Computational Skills</h2>
 
       <div class="skills">
         <div class="skill">
@@ -125,6 +125,102 @@
         </div>
       </div>
     </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="card section">
+      <h2>Experience</h2>
+
+      <div class="timeline">
+        <div class="item">
+          <div class="when">2023 – Present</div>
+          <div class="what">
+            <h3>PhD Candidate · Institute for Organismic and Molecular Evolution, Johannes Gutenberg University Mainz</h3>
+            <p><strong>Project:</strong> Dynamics of Chromosome Evolution in Termites (Priority Programme SPP 2349; funded by DFG).</p>
+            <ul>
+              <li>Comparative genomics and transcriptomics analyses; development of reproducible pipelines.</li>
+              <li>Cross-disciplinary collaboration, scientific communication, and mentoring.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2020 – 2023</div>
+          <div class="what">
+            <h3>MSc Research Assistant (Bioinformatics) · Pwani University</h3>
+            <p><strong>Project:</strong> Genome-wide association study (GWAS) and pipeline development to assess population structure for agro-morphological traits among finger millet.</p>
+            <ul>
+              <li>Built and documented reproducible workflows; supported analysis, interpretation, and reporting.</li>
+              <li>Funded by the Bill &amp; Melinda Gates Foundation (PEARL project).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2018 – 2019</div>
+          <div class="what">
+            <h3>BSc Research · Pwani University BioScience Research Centre (PUBReC)</h3>
+            <p><strong>Project:</strong> Assessing the efficiency of UV rays in sterilization of DNA filter cups.</p>
+            <ul>
+              <li>Fieldwork; nucleic acid extraction; PCR.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2018 – 2019</div>
+          <div class="what">
+            <h3>BSc Research Internship · Kenya Medical Research Institute (KEMRI), Center for Microbiology Research, Nairobi</h3>
+            <p><strong>Project:</strong> Molecular and microbiological investigation of human enterotoxigenic bacteria.</p>
+            <ul>
+              <li>Nucleic acid extraction; PCR; ELISA.</li>
+              <li>Isolation, culture/media preparation; antimicrobial susceptibility testing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2018 – 2019</div>
+          <div class="what">
+            <h3>BSc Internship · International Centre of Insect Physiology and Ecology (icipe), Nairobi</h3>
+            <p><strong>Project:</strong> Molecular detection of the prevalence of <em>Theileria parva</em> at the Maasai Mara National Reserve.</p>
+            <ul>
+              <li>Fieldwork; laboratory animal handling; nucleic acid extraction; PCR; statistical analyses.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="card section">
+      <h2>Education</h2>
+
+      <div class="timeline">
+        <div class="item">
+          <div class="when">2023 – 2026</div>
+          <div class="what">
+            <h3>PhD (Dr. rer. nat.) in Evolutionary Genomics · Johannes Gutenberg University Mainz</h3>
+            <p><strong>Thesis:</strong> Dynamics of Chromosome Evolution in Termites: Multivalent Chains, Inbreeding and Novel Chromosomal Translocations</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2020 – 2023</div>
+          <div class="what">
+            <h3>MSc in Bioinformatics · Pwani University</h3>
+            <p><strong>Thesis:</strong> Genome-wide association study (GWAS) and pipeline development to assess population structure for agro-morphological traits among finger millet</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="when">2015 – 2019</div>
+          <div class="what">
+            <h3>BSc in Microbiology · Pwani University</h3>
+            <p><strong>Thesis:</strong> Assessing the efficiency of Pwani University BioScience Research Centre UV rays in sterilization of DNA filter cups</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -135,7 +231,6 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
     const btn = document.getElementById("menuBtn");
     const panel = document.getElementById("menuPanel");
 
