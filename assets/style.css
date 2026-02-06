@@ -1,6 +1,6 @@
 :root{
   --bg:#0b1020;
-  --card: rgba(17,26,51,.88);
+  --card:#111a33;
   --text:#e9ecf5;
   --muted:#b7c0dd;
   --line:#22305c;
@@ -8,14 +8,6 @@
 
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   --radius: 16px;
-
-  /* Typography scale (smaller, closer to dohmen) */
-  --base: 15px;          /* overall font size */
-  --lh: 1.62;            /* line height */
-  --h1: 22px;            /* About Me / Publications etc */
-  --h2: 16px;            /* section headers */
-  --h3: 14px;            /* card sub-headers */
-  --capsTrack: .10em;    /* small caps spacing */
 }
 
 *{ box-sizing:border-box; }
@@ -24,16 +16,16 @@ html{ scroll-behavior:smooth; }
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-size: var(--base);
-  line-height: var(--lh);
-  color: var(--text);
+  font-size: 14px;
+  line-height: 1.65;
   background:
     radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.18), transparent 50%),
     radial-gradient(900px 600px at 90% 10%, rgba(180,120,255,.14), transparent 50%),
     var(--bg);
+  color:var(--text);
 }
 
-a{ color: var(--accent); text-decoration:none; }
+a{ color:var(--accent); text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
 .container{
@@ -42,13 +34,15 @@ a:hover{ text-decoration:underline; }
   padding: 0 18px;
 }
 
+.section{ scroll-margin-top: 88px; }
+
 /* =========================
-   Top navigation (brand + icons + MENU)
-   ========================= */
+   TOP BAR + MENU
+========================= */
 .topbar{
   position: sticky;
-  top: 0;
-  z-index: 50;
+  top:0;
+  z-index: 999;
   border-bottom: 1px solid rgba(255,255,255,.06);
   background: rgba(11,16,32,.72);
   backdrop-filter: blur(10px);
@@ -58,54 +52,72 @@ a:hover{ text-decoration:underline; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap: 12px;
   padding: 12px 0;
+  gap: 14px;
 }
 
 .brand{
-  font-weight: 650;
-  letter-spacing: .2px;
-  color: var(--text);
-  font-size: 15px;
+  font-weight:700;
+  letter-spacing:.2px;
+  color:var(--text);
+  font-size: 14px;
 }
 
-/* Small icon row (top) */
+/* small horizontal social icons in header */
 .top-icons{
   display:flex;
+  align-items:center;
+  justify-content:center;
   gap: 10px;
-  align-items:center;
-  justify-content:center;
-  margin: 0 10px;
+  flex: 1;
 }
 
-.icon-btn{
-  width: 26px;
-  height: 26px;
+.top-icons a{
+  width: 22px;
+  height: 22px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.03);
-  transition: transform .12s ease, background .12s ease;
-}
-.icon-btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.06); }
-.icon-btn svg{ width: 14px; height: 14px; fill: var(--text); opacity: .9; }
-
-/* MENU button */
-.menu-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding: 7px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
   color: var(--text);
-  font-weight: 600;
-  letter-spacing: .04em;
-  font-size: 12px;
+  opacity: .9;
+}
+
+.top-icons a:hover{
+  opacity: 1;
+  text-decoration:none;
+  border-color: rgba(255,255,255,.22);
+}
+
+.top-icons svg{
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+/* Menu button */
+.menu-btn{
+  appearance:none;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.14);
+  color: var(--text);
+  font-weight: 650;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  display:flex;
+  align-items:center;
+  gap: 8px;
   cursor:pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
+.menu-btn:hover{
+  border-color: rgba(255,255,255,.22);
 }
 
 .burger{
@@ -114,6 +126,7 @@ a:hover{ text-decoration:underline; }
   position: relative;
   display:inline-block;
 }
+
 .burger::before,
 .burger::after{
   content:"";
@@ -121,39 +134,77 @@ a:hover{ text-decoration:underline; }
   left:0;
   right:0;
   height:2px;
-  background: rgba(233,236,245,.9);
+  background: rgba(233,236,245,.85);
   border-radius: 2px;
 }
+
 .burger::before{ top:0; }
 .burger::after{ bottom:0; }
 
-/* dropdown panel */
+/* menu panel */
 .menu-panel{
   display:none;
   flex-direction:column;
-  gap: 2px;
-  padding: 10px 12px 14px;
+  gap: 10px;
+  padding: 14px 18px 16px;
   border-top: 1px solid rgba(255,255,255,.06);
-  background: rgba(11,16,32,.9);
+  background: rgba(11,16,32,.92);
 }
+
 .menu-panel.open{ display:flex; }
+
 .menu-panel a{
   color: var(--muted);
-  padding: 8px 8px;
-  border-radius: 10px;
   font-size: 13px;
+  padding: 6px 0;
 }
+
 .menu-panel a:hover{
   color: var(--text);
-  background: rgba(255,255,255,.05);
   text-decoration:none;
 }
 
 /* =========================
-   Cards / sections
-   ========================= */
+   TYPOGRAPHY (Dohmen-like)
+========================= */
+h1{
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  display:inline-block;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(233,236,245,.75);
+}
+
+h2{
+  font-size: 15px;
+  font-weight: 780;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  display:inline-block;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(233,236,245,.35);
+}
+
+h3{
+  font-size: 13.5px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+p{ margin: 0 0 12px; color: rgba(233,236,245,.92); }
+.lede{ color: rgba(233,236,245,.95); font-size: 14px; }
+
+.muted{ color: var(--muted); }
+
+/* =========================
+   CARDS / HERO
+========================= */
 .card{
-  background: var(--card);
+  background: rgba(17,26,51,.88);
   border: 1px solid rgba(255,255,255,.06);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -161,146 +212,102 @@ a:hover{ text-decoration:underline; }
   margin: 16px 0;
 }
 
-.section{ scroll-margin-top: 84px; }
-
-/* Titles — smaller + cleaner like dohmen */
-h1{
-  margin: 0 0 10px;
-  font-size: var(--h1);
-  font-weight: 800;
-  letter-spacing: var(--capsTrack);
-  text-transform: uppercase;
-}
-
-h2{
-  margin: 0 0 10px;
-  font-size: var(--h2);
-  font-weight: 750;
-  letter-spacing: var(--capsTrack);
-  text-transform: uppercase;
-}
-
-h3{
-  margin: 0 0 8px;
-  font-size: var(--h3);
-  font-weight: 650;
-}
-
-/* Underline for About Me title */
-.title-underline{
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-.title-underline::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width: 72px;
-  height: 2px;
-  background: rgba(233,236,245,.75);
-  border-radius: 2px;
-}
-
-/* Hero layout */
 .hero{
-  margin-top: 16px;
+  padding: 18px 0 4px;
 }
+
 .hero-grid{
   display:grid;
-  grid-template-columns: 280px 1fr;
-  gap: 18px;
+  grid-template-columns: 240px 1fr;
+  gap: 22px;
   align-items: start;
 }
-@media (max-width: 820px){
+
+@media (max-width: 840px){
   .hero-grid{ grid-template-columns: 1fr; }
 }
 
-/* Profile image positioning like your screenshot (left column, not centered) */
 .hero-photo{
   display:flex;
   justify-content:center;
 }
+
 .profile-pic{
-  width: 240px;
-  height: 240px;
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   border-radius: 50%;
-  display:block;
-  margin: 8px 0 0;
   border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 12px 34px rgba(0,0,0,.35);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
 
-.lede{
-  color: var(--muted);
-  margin-top: 0;
-}
-
-/* Buttons/pills under About */
+/* pills (quick links under about text) */
 .pillnav{
   display:flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin-top: 14px;
 }
+
 .pillnav a{
-  padding: 7px 11px;
+  padding: 7px 10px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.12);
   color: var(--muted);
-  font-size: 12.5px;
+  font-size: 12px;
 }
+
 .pillnav a:hover{
   color: var(--text);
-  background: rgba(255,255,255,.05);
   text-decoration:none;
+  border-color: rgba(255,255,255,.22);
 }
 
 /* =========================
-   Skill bars (keep them!)
-   ========================= */
+   SKILL BARS (keep them)
+========================= */
 .skills-band{
+  padding: 18px 0;
   border-top: 1px solid rgba(255,255,255,.06);
   border-bottom: 1px solid rgba(255,255,255,.06);
-  background: rgba(0,0,0,.10);
-  padding: 18px 0;
+  background: rgba(0,0,0,.08);
 }
+
 .band-title{
-  margin: 0 0 10px;
+  margin-bottom: 12px;
 }
 
 .skills{
   display:flex;
   flex-direction:column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .skill-label{
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 7px;
+  font-size: 12.5px;
+  color: rgba(233,236,245,.94);
+  margin-bottom: 6px;
+  font-weight: 650;
 }
 
 .skill-track{
+  width: 100%;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.06);
   overflow:hidden;
 }
 
 .skill-fill{
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, #33c6ff, #7ed957);
+  background: linear-gradient(90deg, #35c2ff, #7ee36b);
 }
 
 /* =========================
-   Timeline (Education / Experience style)
-   ========================= */
+   TIMELINES (education/experience)
+========================= */
 .timeline{
   display:flex;
   flex-direction:column;
@@ -316,140 +323,156 @@ h3{
   border-radius: 14px;
   background: rgba(0,0,0,.12);
 }
-@media (max-width: 720px){
+
+@media (max-width: 680px){
   .item{ grid-template-columns: 1fr; }
 }
 
 .when{
   color: var(--muted);
   font-variant-numeric: tabular-nums;
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
 .what ul{
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
+  font-size: 13px;
 }
-.what li{ margin: 6px 0; }
+
+.what li{ margin: 0 0 6px; }
 
 .what p{
   margin: 0;
   color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
 }
 
-/* Make "Project" label bold with no bullet before it (use <p><strong>Project:</strong> …</p>) */
-.what strong{ color: var(--text); }
+/* make **Project** bold, no bullet before it */
+.what ul li strong{
+  color: rgba(233,236,245,.95);
+  font-weight: 750;
+}
 
 /* =========================
-   Publications list
-   ========================= */
+   PUBLICATIONS LIST
+========================= */
 .pubs{
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
+  font-size: 13px;
 }
-.pubs li{ margin: 10px 0; }
+
+.pubs li{ margin: 0 0 10px; }
+
 .tag{
   display:inline-block;
   margin-left: 8px;
-  padding: 3px 8px;
-  border-radius: 999px;
   font-size: 11px;
-  border: 1px solid rgba(255,255,255,.14);
-  color: var(--muted);
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(233,236,245,.90);
+  background: rgba(0,0,0,.12);
 }
-.muted{ color: var(--muted); }
 
 /* =========================
-   Footer icons (small, horizontal)
-   ========================= */
-.footer{
-  padding: 22px 0;
+   TEACHING / CONFERENCES
+   (clean like education)
+========================= */
+.list-block{
+  display:flex;
+  flex-direction:column;
+  gap: 12px;
+}
+
+.list-item{
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  background: rgba(0,0,0,.12);
+}
+
+@media (max-width: 680px){
+  .list-item{ grid-template-columns: 1fr; }
+}
+
+.list-date{
   color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,.06);
-  margin-top: 26px;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
 }
 
-.footer-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: 14px;
-  flex-wrap: wrap;
+.list-main{
+  color: rgba(233,236,245,.92);
+  font-size: 13px;
 }
 
-.footer-icons{
+.list-main strong{
+  color: rgba(233,236,245,.98);
+  font-weight: 760;
+}
+
+/* =========================
+   LAB SKILLS single line
+========================= */
+.labline{
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FOOTER + BOTTOM ICONS
+========================= */
+.footer{
+  padding: 22px 0 28px;
+  color: var(--muted);
+  font-size: 12.5px;
+}
+
+.bottom-icons{
   display:flex;
+  justify-content:center;
   gap: 10px;
-  align-items:center;
+  margin: 14px 0 4px;
 }
 
-.footer-icons a{
-  width: 28px;
-  height: 28px;
+.bottom-icons a{
+  width: 26px;
+  height: 26px;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.14);
-  background: rgba(255,255,255,.03);
-}
-.footer-icons svg{
-  width: 14px;
-  height: 14px;
-  fill: var(--muted);
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.12);
+  color: rgba(233,236,245,.95);
   opacity: .9;
 }
-.footer-icons a:hover svg{ fill: var(--text); }
 
-/* Small spacing helpers */
-hr.sep{
-  border:0;
-  border-top: 1px solid rgba(255,255,255,.06);
-  margin: 18px 0;
+.bottom-icons a:hover{
+  opacity: 1;
+  text-decoration:none;
+  border-color: rgba(255,255,255,.22);
 }
 
-/* ===== FORCE page titles to match Dohmen style (small + underlined) ===== */
-h1,
-.page-title,
-.band-title,
-.section-title{
-  font-size: 22px !important;
-  font-weight: 800 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
-  margin: 0 0 14px !important;
-  display: inline-block !important;
-  position: relative !important;
-  padding-bottom: 10px !important;
+.bottom-icons svg{
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
 }
 
-/* underline bar */
-h1::after,
-.page-title::after,
-.band-title::after,
-.section-title::after{
-  content: "" !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: 0 !important;
-  width: 72px !important;
-  height: 2px !important;
-  background: rgba(233,236,245,.75) !important;
-  border-radius: 2px !important;
-}
+/* ensure no accidental huge SVGs anywhere */
+svg{ max-width: 100%; max-height: 100%; }
 
-/* shrink secondary headings too */
-h2{
-  font-size: 15px !important;
-  font-weight: 750 !important;
-  letter-spacing: .08em !important;
-  text-transform: uppercase !important;
-  margin: 0 0 12px !important;
-}
-
-h3{
-  font-size: 13.5px !important;
-  font-weight: 650 !important;
-}
+/* =========================
+   SMALL SAFETY OVERRIDES
+========================= */
+img{ max-width: 100%; height: auto; }
