@@ -409,3 +409,47 @@ hr.sep{
   border-top: 1px solid rgba(255,255,255,.06);
   margin: 18px 0;
 }
+
+/* ===== FORCE page titles to match Dohmen style (small + underlined) ===== */
+h1,
+.page-title,
+.band-title,
+.section-title{
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 14px !important;
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 10px !important;
+}
+
+/* underline bar */
+h1::after,
+.page-title::after,
+.band-title::after,
+.section-title::after{
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 72px !important;
+  height: 2px !important;
+  background: rgba(233,236,245,.75) !important;
+  border-radius: 2px !important;
+}
+
+/* shrink secondary headings too */
+h2{
+  font-size: 15px !important;
+  font-weight: 750 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  margin: 0 0 12px !important;
+}
+
+h3{
+  font-size: 13.5px !important;
+  font-weight: 650 !important;
+}
