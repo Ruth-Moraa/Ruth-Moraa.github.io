@@ -446,3 +446,99 @@ hr.sep{
   background: rgba(255,255,255,.08);
   margin: 18px 0;
 }
+
+/* ================================
+   Global typography scale (compact)
+   Paste at END of style.css
+================================ */
+
+/* Base text smaller + tighter */
+html { font-size: 15px; }                 /* affects everything */
+body { line-height: 1.6; }
+
+/* Headings */
+h1{
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+h2{
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: .4px;
+  margin: 0 0 10px;
+}
+h3{
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+/* Paragraphs + lists */
+p{ margin: 0 0 12px; }
+.lede{ font-size: 1rem; }                 /* no extra-large lead text */
+ul, ol{ margin: 0; }
+.bullets li,
+.pubs li,
+.what ul li{ margin: 0 0 6px; }
+
+/* Topbar/nav text smaller */
+.brand{ font-size: 15px; }
+.nav a,
+.menu-panel a,
+.menu-btn{
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+
+/* Pills/buttons smaller */
+.pillnav a{
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+/* Cards: a bit tighter */
+.card{
+  padding: 18px;
+  margin: 14px 0;
+}
+@media (max-width: 680px){
+  .card{ padding: 16px; }
+}
+
+/* Timeline tighter + smaller date column text */
+.item{
+  padding: 12px;
+  gap: 12px;
+}
+.when{
+  font-size: 12.5px;
+}
+.what p,
+.what ul{
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+/* Skill bars text smaller */
+.band-title{ font-size: 18px; margin: 0 0 12px; }
+.skill-label{ font-size: 13px; }
+.skills{ gap: 12px; }
+
+/* Icon links text smaller (if you show labels) */
+.icon-link span{ font-size: 12.5px; }
+
+/* Footer smaller */
+.footer{
+  font-size: 12.5px;
+}
+
+/* Optional: if any page titles were HUGE (like TEACHING & SUPERVISION) */
+.page-title,
+.section-title{
+  font-size: 28px;
+  letter-spacing: .8px;
+}
+
